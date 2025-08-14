@@ -54,7 +54,7 @@ const createTask = async(req = request, res = response) => {
 
         return res.status(200).send({
             msg: "Tarea creada",
-            taskSave
+            task: taskSave
         })
     } catch (error) {
         return res.status(500).send({
@@ -77,7 +77,7 @@ const updateTaskById = async(req = request, res = response) => {
         return res.status(200).send({
             error: false,
             msg: "tarea actualizada",
-            taskUpdated
+            task: taskUpdated
         })
     } catch (error) {
         return res.status(500).send({
